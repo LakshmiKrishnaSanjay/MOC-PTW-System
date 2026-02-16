@@ -7,11 +7,8 @@ import Request from '../models/Request.js';
 
 const router = express.Router();
 
-// All routes in this file require authentication
 router.use(auth);
 
-// GET /api/contractors
-// Only HSE can see the list of contractors
 router.get(
   '/',
   restrictTo('HSE'),
